@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react'
 import DeleteItem from './DeleteItem'
 import EditItem from './EditItem'
 
-// Define a function to compare two items based on their cuisine
 function sortByCuisine (a, b) {
   if (a.cuisine < b.cuisine) {
     return -1
@@ -11,11 +10,11 @@ function sortByCuisine (a, b) {
   if (a.cuisine > b.cuisine) {
     return 1
   }
-  return 0 // If both cuisines are equal, no change in order
+  return 0
 }
 
 const GetAll = () => {
-  const [data, setData] = useState([]) // Initialize data as an empty array
+  const [data, setData] = useState([])
 
   useEffect(() => {
     axios
